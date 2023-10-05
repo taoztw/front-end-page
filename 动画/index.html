@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        font-size: 3em;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .container span {
+        margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <span class="animate__animated animate__rotateIn">L</span>
+        <span class="animate__animated animate__zoomIn">L</span>
+        <span class="animate__animated animate__slideInDown">M</span>
+        <span class="animate__animated animate__heartBeat">+</span>
+        <span class="animate__animated animate__lightSpeedInRight animate__delay-1s">D o c</span>
+    </div>
+
+    <script>
+        const Add = document.querySelector('.animate__heartBeat')
+        const Doc = document.querySelector(".animate__lightSpeedInRight")
+        Doc.addEventListener("animationend", ()=>{
+            Add.classList.remove("animate__heartBeat")
+            Add.classList.add("animate__swing")
+        })
+    </script>
+</body>
+</html>
